@@ -80,7 +80,7 @@ def _decode_set(initial_result):
 
 def iso_to_datetime(iso_string):
     return datetime.strptime(
-        iso_string.rsplit('.', 1)[0],
+        iso_string.rsplit('.', 1)[0].rsplit('Z')[0],
         '%Y-%m-%dT%H:%M:%S'
     )
 
